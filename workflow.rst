@@ -493,6 +493,12 @@ missing a title::
             ];
         }
     }
+    
+.. note::
+
+    When using guard listeners which imply intensive workloads (CPU, Database or longer-running code blocks), if you only want them to be fired when strictly necesary (only when ``Workflow::can()`` or ``Workflow::apply()`` is executed), be sure to disable ``Workflow::DISABLE_ANNOUNCE_EVENT`` as indicated in :ref:`Choosing which Events to Dispatch <workflow-chosing-events-to-dispatch>`
+    
+.. _workflow-chosing-events-to-dispatch:
 
 Choosing which Events to Dispatch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
